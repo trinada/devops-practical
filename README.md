@@ -7,6 +7,7 @@ Table of contents:
 <!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
 - [Install](#install)
+- [Testing Locally](#testing-locally)
 
 <!-- /TOC -->
 

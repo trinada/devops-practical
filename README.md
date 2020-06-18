@@ -1,4 +1,4 @@
-#Swimlane DevOps Practical
+# Swimlane DevOps Practical
 
 This is a demo application to use for working on the Swimlane DevOps hiring practical project.
 

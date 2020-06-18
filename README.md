@@ -10,11 +10,12 @@ Table of contents:
 
 <!-- /TOC -->
 
-## Install
+### Install
 
 Required environment variables:
 - `MONGODB_URL` - Full MongoDB connection URI to connect to
 
+### Testing Locally
 ```sh
 git clone git://github.com/swimlane/devops-practical.git
 npm install

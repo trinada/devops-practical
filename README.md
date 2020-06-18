@@ -2,15 +2,6 @@
 
 This is a demo application to use for working on the Swimlane DevOps hiring practical project.
 
-Table of contents:
-
-<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [Install](#install)
-- [Testing Locally](#testing-locally)
-
-<!-- /TOC -->
-
 ### Install
 
 Required environment variables:

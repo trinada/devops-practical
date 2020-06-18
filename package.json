@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-express-mongoose-demo",
+  "name": "swimlane-devops-practical",
   "description": "A demo app illustrating the usage of express, mongoose, passportjs, pug and other modules in nodejs",
   "keywords": [
     "express",
@@ -52,7 +52,7 @@
     "passport-linkedin": "~1.0.0",
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.4",
-    "pm2": "~4.2.1",
+    "pm2": "~4.4.0",
     "pug": "~2.0.4",
     "ultimate-pagination": "~1.0.0",
     "view-helpers": "~0.2.0",

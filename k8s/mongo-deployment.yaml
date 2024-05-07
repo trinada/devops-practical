@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: mongo
+  name: mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mongo
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.network/devops-practical-default: "true"
+        io.kompose.service: mongo
+    spec:
+      containers:
+        - image: mongo:latest
+          name: database-container
+          volumeMounts:
+            - mountPath: /data/db
+              name: mongo
+          resources:
+      requests:
+        memory: 200Mi
+        cpu: 500m
+      limits:
+        memory: 1Gi
+        cpu: 1100m
+      restartPolicy: Always
+      volumes:
+        - name: mongo
+          persistentVolumeClaim:
+            claimName: mongo

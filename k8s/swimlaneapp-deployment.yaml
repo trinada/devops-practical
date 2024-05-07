@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert --file docker-compose.yml --out k8s/
+    kompose.version: 1.33.0 (HEAD)
+  labels:
+    io.kompose.service: swimlaneapp
+  name: swimlaneapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: swimlaneapp
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert --file docker-compose.yml --out k8s/
+        kompose.version: 1.33.0 (HEAD)
+      labels:
+        io.kompose.network/devops-practical-default: "true"
+        io.kompose.service: swimlaneapp
+    spec:
+      containers:
+        - env:
+            - name: MONGODB_URL
+              value: mongodb://mongo:27017/database
+          image: tri1107/swimlane:devopstest
+          name:  tri1107/swimlane:devopstest
+          resources:
+            limits:
+              cpu: 1100m
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 200Mi
+          ports:
+            - containerPort: 3000
+              hostPort: 4000
+              protocol: TCP
+      restartPolicy: Always
